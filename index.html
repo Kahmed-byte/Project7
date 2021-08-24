@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <title>WebApp test</title>
 </head>
 <body>
@@ -133,7 +132,7 @@
             </section>
             <!-- new members widget -->
         <div class="moc3">
-            <section class="members">
+            <section class="members" style="border-left: none;">
                 <h3>NEW MEMBERS</h3>
                 <div class="members-container">
                     <div class="member">
@@ -160,7 +159,7 @@
                         </div>
                         <p>10/15/15</p>
                     </div>
-                    <div class="member">
+                    <div class="member" id="lastMember">
                         <img src="images/member-4.jpg" class="profile-image">
                         <div class="members-text">
                             <p>Dan Oliver</p>
@@ -203,7 +202,7 @@
                         </div>
                         <p class="greaterThan">></p>
                     </div>
-                    <div class="member">
+                    <div class="member" id="lastMember">
                         <img src="images/member-4.jpg" class="profile-image">
                         <div class="test123">
                             <div class="members-text">
@@ -228,26 +227,24 @@
             <section class="settings">
                 <h3 id="settingsfield">Settings</h3>
                 <!-- custom CSS toggle code-->
-                <div class="switch large">
+                <div class="switchLarge">
                 <p>Send Email Notifications?</p>
-                <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
-                <label class="switch-paddle" for="yes-no">
-                    <span class="switch-active" aria-hidden="true">ON</span>
-                    <span class="switch-inactive" aria-hidden="true">OFF</span>
-                </label>
+                <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch" checked>
                 </div>
                 <!-- custom CSS toggle code-->
-                <div class="switch large">
+                <div class="switchLarge">
                 <p>Set Profile to Public?</p>
-                <input class="switch-input" id="yes-no2" type="checkbox" name="exampleSwitch">
-                <label class="switch-paddle" for="yes-no2">
-                    <span class="switch-active" aria-hidden="true">ON</span>
-                    <span class="switch-inactive" aria-hidden="true">OFF</span>
-                </label>
+                <input class="switch-input" id="yes-no2" type="checkbox" name="exampleSwitch" checked>
                 </div>
                 <select class="form-field" id="timezone">
                     <option disabled selected>Select a Timezone</option>
                     <option>Eastern</option>
+                    <option>Central</option>
+                    <option>Mountain</option>
+                    <option>Pacific</option>
+                    <option>Alaska</option>
+                    <option>Hawaii</option>
+                    <option>Hawaii (Standard)</option>
                 <!-- more options -->
                 </select>
                 <div class="settings-button" >
