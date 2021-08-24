@@ -2,6 +2,10 @@ const dropD = document.querySelector('.logo');
 const dd    = document.querySelector('.dropdown-content');
 let bjelle = document.querySelector('.logo');
 const ex = document.querySelector('.ex');
+let dot = document.querySelector('.dot');
+let alert = document.querySelector('.alert');
+
+
 
 dropD.addEventListener('click',  function() {
 
@@ -11,20 +15,20 @@ dropD.addEventListener('click',  function() {
 
 window.addEventListener('mouseup', function(e){
     let dn = document.querySelector('.dropdown-content'); 
-    let dot = document.querySelector('.dot');
     
-    if (e.target != dn) {
+    if (e.target != dn && dn.style.display=='block') {
         dn.style.display='none';
         bjelle.style.display='block';
         dot.style.display="none";
+        alert.style.display="none";
 
     }
 });
 
 ex.addEventListener('click', (e)=> {
-    let alert = document.querySelector('.alert');
     let xbutton = e.target;
     alert.style.display="none";
+    dot.style.display="none";
 })
 
   const user = document.getElementById("userField");
