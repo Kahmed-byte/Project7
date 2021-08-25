@@ -4,11 +4,14 @@ let bjelle = document.querySelector('.logo');
 const ex = document.querySelector('.ex');
 let dot = document.querySelector('.dot');
 let alert = document.querySelector('.alert');
+let swtch = document.querySelector('.switch-input');
+let timezone = document.querySelector('#timezone');
+let save = document.querySelector('#save');
+let cancel = document.querySelector('#cancel');
 
 
 
 dropD.addEventListener('click',  function() {
-
         dd.style.display='block';
         bjelle.style.display='none';
 });
@@ -21,7 +24,6 @@ window.addEventListener('mouseup', function(e){
         bjelle.style.display='block';
         dot.style.display="none";
         alert.style.display="none";
-
     }
 });
 
@@ -38,14 +40,21 @@ ex.addEventListener('click', (e)=> {
   send.addEventListener('click', () => {
   
   if (user.value === "" && message.value === "") {
-    alert("Please fill out user and message fields before sending");
+    window.alert("Please fill out user and message fields before sending");
     } else if (user.value === "" ) {
-    alert("Please fill out user field before sending");
+        window.alert("Please fill out user field before sending");
     } else if (message.value === "" ) {
-    alert("Please fill out message field before sending");
+        window.alert("Please fill out message field before sending");
     } else {
-    alert(`Message successfully sent to: ${user.value}`);
+        window.alert(`Message successfully sent to: ${user.value}`);
     }
     });
 
-    
+    save.addEventListener('click', function() {
+        localStorage.setItem('savedToggle', JSON.stringify(swtch));
+        localStorage.setItem('savedTimezone', JSON.stringify(timezone));
+    })
+
+    cancel.addEventListener('click', function() {
+        window.localStorage.clear();
+    })
