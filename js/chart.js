@@ -109,7 +109,8 @@ hourlyL.addEventListener('click', function(event)  {
         legend: {
           display: false
         }
-   } 
+   },
+   maintainAspectRatio: false 
 };
 
 let dailyChart = new Chart(dailyCanvas, { 
@@ -137,6 +138,7 @@ const mobileData = {
   };
 
   const mobileOptions = {
+
     plugins: {
       legend: {
         position: 'right',
@@ -145,7 +147,8 @@ const mobileData = {
           fontStyle: 'bold'
         }
       }
-    }
+    },
+   maintainAspectRatio: false 
   };
 
   let mobileChart = new Chart(mobileCanvas, {
